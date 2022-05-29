@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Hi-Fi Shop & Service
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-searchbar [(ngModel)]="searchInput" (ngModelChange)="onInputSearch()" showCancelButton="never" placeholder="Search a product"></ion-searchbar>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let item of this.products" size="6">
+        <ion-item>
+          <ion-img
+                  style="height: 100px; width:100px;"
+                  class="mr-b-10 mr-t-10"
+                  src={{item.productImage}}
+                ></ion-img>
+              </ion-item>
+          <p style="margin-left: 10px;">{{item.productName}}</p>
+          <p style="margin-left: 10px;">{{item.productPrice}} Rs.</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab-button color="primary" href="add-product" style="font-size: 30px;">+</ion-fab-button>
+</ion-content>

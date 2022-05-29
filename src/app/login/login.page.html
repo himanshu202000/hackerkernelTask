@@ -1,0 +1,45 @@
+<ion-content>
+  <form #f [formGroup]="form" (ngSubmit)="logform(f)">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p>
+            Sign In with your Mobile / email
+          </p>
+          <ion-item class="mr-t-20" lines="none">
+              <ion-input
+                name="email"
+                required
+                formControlName="emailMobile"
+                [(ngModel)]="formData.email"
+                placeholder="mobile/email"
+              >
+              </ion-input>
+          </ion-item>
+          <ion-item lines="none">
+            <div class="wd-100 MobineInputContainer d-flex-sb">
+              <ion-input
+              type="password"
+                name="password"
+                required
+                formControlName="password"
+                [(ngModel)]="formData.password"
+                placeholder="Password"
+              >
+              </ion-input>
+            </div>
+          </ion-item>
+          <ion-item>
+
+            <ion-button type="submit" class="HomeBtn"
+            >
+            <ion-label class="ff-E-M fs-14"
+            >Sign In </ion-label
+            ></ion-button
+            >
+          </ion-item>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

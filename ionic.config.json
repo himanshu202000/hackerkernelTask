@@ -1,0 +1,7 @@
+{
+  "name": "hackerkerneltask",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
